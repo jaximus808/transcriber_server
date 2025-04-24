@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const Callback = () => {
   const [searchParams] = useSearchParams();
   const [status, setStatus] = useState('Authenticating...');
-
+  const navigate = useNavigate();
   useEffect(() => {
     const code = searchParams.get('code');
 
@@ -14,17 +14,24 @@ const Callback = () => {
     }
 
     // Optional: send to your backend
-    fetch('http://localhost:3001/callback', {
+    fetch('api/callback', {
       method: 'GET',
       credentials: 'include',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'x-discord-code': code
       },
-      body: JSON.stringify({ code })
     })
       .then(res => res.json())
       .then(data => {
-        setStatus(`Logged in as ${data.username}`);
+        console.log(data)
+        console.log("GOOD?")
+        if(data.ok) {
+            navigate("/home")
+        }
+        else {
+            navigate("/")
+        }
       })
       .catch(err => {
         console.error(err);

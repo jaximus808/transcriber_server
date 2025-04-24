@@ -10,7 +10,9 @@ const App = () => {
   return (
     <div className="h-screen flex items-center justify-center bg-gray-900 text-white">
       <div className="text-center">
-        <h1 className="text-3xl font-bold mb-6">Connect to Discord</h1>
+
+        <h1 className="text-3xl font-bold mb-6">Connect to Client Landscaper</h1>
+        <h2 className="text-2xl font-semibold mb-6">Connect to Discord</h2>
         <button
           onClick={handleDiscordLogin}
           className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition"
