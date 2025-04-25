@@ -57,7 +57,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
-      <img src="palantir-white.png"/>
+      
       <h1 className="text-2xl font-bold mb-4">
         Welcome, {user.username}
       </h1>

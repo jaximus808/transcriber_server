@@ -34,7 +34,6 @@ router.get('/callback', async (req: Request, res: Response): Promise<any> => {
     return res.status(500).send({ok: false});
   }
   
-  console.log("WTF IS AHPPENING")
   const { access_token } = await tokenRes.json();
   
   try {
