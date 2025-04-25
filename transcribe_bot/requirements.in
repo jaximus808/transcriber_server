@@ -8,3 +8,5 @@ pydub
 setuptools
 six
 PyNaCL
+discord-ext-voice-recv
+dotenv
