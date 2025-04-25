@@ -10,7 +10,7 @@ const DISCORD_CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET!;
 const DISCORD_REDIRECT_URI = process.env.DISCORD_REDIRECT_URI!;
 
 // Initialize Docker client
-const docker = new Docker();
+const docker = new Docker({ socketPath: '/home/observer/.docker/desktop/docker.sock' });
 
 router.get('/callback', async (req: Request, res: Response): Promise<any> => {
   const code = req.headers['x-discord-code'] as string;
