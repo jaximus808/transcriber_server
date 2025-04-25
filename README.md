@@ -24,6 +24,20 @@ For discord bot, you would need to pull from a docker image, but I haven't made 
 
 instructions can be found in /transcribe_bot
 
+# Foundry Stuff:
+
+/Pipeline_AI_function
+
+This is the typescript code I used to define the pipeline that takes the transcript text, who said who, and converts that into a relations ship heirarchy using the ontology. It's basically AIP but in typescript.
+
+The foundry code is not runnable locally, but runs on the the foundry ontology, the code is just pasted here so my approach is viewable.
+
+/ReactDevConsole
+
+This is the react code shown in the demo and at https://clientlandscape-5ilramrr6upknllk.apps.usw-18.palantirfoundry.com/
+
+This page unfor. can't be open since only I can open it. I don't have really any groups to share the project with on foundry, but if you want to view it email me.
+
 ### NOTE:
 
 For the transcribe bot, you need to create a /audio_segment directory, as git won't put it in its commit since i'm ignoring it
